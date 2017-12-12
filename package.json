@@ -1,0 +1,27 @@
+{
+  "name": "webext-tx-fix",
+  "version": "0.1.0",
+  "description": "Fix locales missing placeholders pulled from transifex",
+  "author": "eight04 <eight04@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "eslint **/*.js",
+    "preversion": "npm test",
+    "version": "npm run build && git add .",
+    "postversion": "git push --follow-tags && npm publish",
+    "build": "inlinejs README.md -o README.md",
+    "prepack": "crlf --set=LF cli.js"
+  },
+  "bin": {
+    "webext-tx-fix": "cli.js"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "neodoc": "^1.3.1"
+  },
+  "devDependencies": {
+    "crlf": "^1.1.1",
+    "inline-js": "^0.5.0"
+  },
+  "repository": "eight04/webext-tx-fix"
+}
