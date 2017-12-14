@@ -5,7 +5,7 @@
   "author": "eight04 <eight04@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "eslint **/*.js",
+    "test": "eslint **/*.js && mocha",
     "preversion": "npm test",
     "version": "npm run build && git add .",
     "postversion": "git push --follow-tags && npm publish",
@@ -21,7 +21,9 @@
   },
   "devDependencies": {
     "crlf": "^1.1.1",
-    "inline-js": "^0.5.0"
+    "inline-js": "^0.5.0",
+    "mocha": "^4.0.1",
+    "power-assert": "^1.4.4"
   },
   "repository": "eight04/webext-tx-fix"
 }
