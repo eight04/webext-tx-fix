@@ -28,14 +28,20 @@ function init({
 	}
 	const defaultLocale = require(`${source}/manifest.json`).default_locale;
 	const messages = require(`${source}/_locales/${defaultLocale}/messages.json`);
+	const keys = Object.keys(messages);
 	fs.readdirSync(`${source}/_locales`)
 		.filter(l => l != defaultLocale)
 		.forEach(locale => {
 			const filename = `${source}/_locales/${locale}/messages.json`;
 			const translate = JSON.parse(fs.readFileSync(filename, "utf8"));
 			if (fixMessages(messages, translate)) {
-				fs.writeFileSync(filename, JSON.stringify(translate, null, "\t"), "utf8");
+				const ordered = new Proxy(translate, {
+					ownKeys: () => keys
+				});
+				const json = JSON.stringify(ordered, null, "\t");
+				fs.writeFileSync(filename, json, "utf8");
 			}
 		});
 }
+
 module.exports = {init, fixMessages};
