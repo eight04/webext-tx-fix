@@ -36,6 +36,11 @@ Options:
 Changelog
 ---------
 
+* 0.2.0 (Dec 14, 2017)
+
+	- **Add: messages which is not translated are removed.**
+	- **Add: re-order the messages to match source language.**
+
 * 0.1.0 (Dec 12, 2017)
 
     - First release.
