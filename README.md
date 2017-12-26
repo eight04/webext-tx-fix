@@ -36,6 +36,10 @@ Options:
 Changelog
 ---------
 
+* 0.2.1 (Dec 26, 2017)
+
+	- Add: use ordered-json.
+
 * 0.2.0 (Dec 14, 2017)
 
 	- **Add: messages which is not translated are removed.**
