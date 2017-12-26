@@ -1,6 +1,8 @@
 const path = require("path");
 const fs = require("fs");
 
+const orderedJSON = require("ordered-json");
+
 function fixMessages(messages, translate) {
 	let isEdited = false;
 	for (const key of Object.keys(translate)) {
@@ -35,11 +37,11 @@ function init({
 			const filename = `${source}/_locales/${locale}/messages.json`;
 			const translate = JSON.parse(fs.readFileSync(filename, "utf8"));
 			if (fixMessages(messages, translate)) {
-				const ordered = new Proxy(translate, {
-					ownKeys: () => keys
+				const data = orderedJSON.stringify(translate, {
+					space: "\t",
+					order: keys
 				});
-				const json = JSON.stringify(ordered, null, "\t");
-				fs.writeFileSync(filename, json, "utf8");
+				fs.writeFileSync(filename, data, "utf8");
 			}
 		});
 }
