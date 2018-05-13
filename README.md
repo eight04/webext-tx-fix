@@ -39,6 +39,12 @@ Options:
 Changelog
 ---------
 
+* 0.3.0 (May 13, 2018)
+
+  - Update neodoc.
+  - Add: files are processed in parallel.
+  - Add: detect the indent style of the source language and fix the indent if translation.
+
 * 0.2.1 (Dec 26, 2017)
 
 	- Add: use ordered-json.
