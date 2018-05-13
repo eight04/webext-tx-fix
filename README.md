@@ -39,6 +39,10 @@ Options:
 Changelog
 ---------
 
+* 0.3.1 (May 13, 2018)
+
+  - Exclude test files from the dist.
+
 * 0.3.0 (May 13, 2018)
 
   - Update neodoc.
