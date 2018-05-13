@@ -1,5 +1,4 @@
-node_modules
-
-*.log
-
+node_modules/
+.nyc_output/
+coverage/
 .eslintcache
