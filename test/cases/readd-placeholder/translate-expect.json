@@ -1,0 +1,10 @@
+{
+  "a": {
+    "message": "b",
+    "placeholders": {
+      "foo": {
+        "content": "$1"
+      }
+    }
+  }
+}
