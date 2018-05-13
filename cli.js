@@ -13,4 +13,8 @@ Options:
 	laxPlacement: true
 });
 
-require("./index").init({args});
+require("./index").init({args})
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
