@@ -1,6 +1,6 @@
 {
   "name": "webext-tx-fix",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Fix locales missing placeholders pulled from transifex",
   "author": "eight04 <eight04@gmail.com>",
   "license": "MIT",
@@ -22,7 +22,9 @@
   "bin": {
     "webext-tx-fix": "cli.js"
   },
-  "files": ["cli.js"],
+  "files": [
+    "cli.js"
+  ],
   "main": "index.js",
   "dependencies": {
     "detect-indent": "^5.0.0",
