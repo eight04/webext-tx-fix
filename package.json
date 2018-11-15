@@ -28,16 +28,16 @@
   "main": "index.js",
   "dependencies": {
     "detect-indent": "^5.0.0",
-    "neodoc": "^2.0.0",
+    "neodoc": "^2.0.2",
     "ordered-json": "^0.1.1"
   },
   "devDependencies": {
-    "coveralls": "^3.0.1",
+    "coveralls": "^3.0.2",
     "crlf": "^1.1.1",
     "eslint": "^4.19.1",
     "inline-js": "^0.6.1",
-    "mocha": "^5.1.1",
-    "nyc": "^11.7.3"
+    "mocha": "^5.2.0",
+    "nyc": "^11.9.0"
   },
   "repository": "eight04/webext-tx-fix",
   "engines": {
