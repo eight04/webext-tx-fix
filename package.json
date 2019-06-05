@@ -12,7 +12,6 @@
   "scripts": {
     "lint": "eslint **/*.js --cache --ignore-pattern=coverage",
     "test": "npm run lint && nyc --reporter=html mocha",
-    "coverage": "nyc report --reporter=text-lcov | coveralls",
     "preversion": "npm test",
     "version": "npm run build && git add .",
     "postversion": "git push --follow-tags && npm publish",
@@ -32,7 +31,6 @@
     "ordered-json": "^0.1.1"
   },
   "devDependencies": {
-    "coveralls": "^3.0.2",
     "crlf": "^1.1.1",
     "eslint": "^5.9.0",
     "inline-js": "^0.8.0",

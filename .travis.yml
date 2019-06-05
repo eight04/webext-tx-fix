@@ -4,4 +4,5 @@ node_js:
 before_install:
   - npm install -g npm@latest
   - npm --version
-after_success: npm run coverage
+after_success:
+  - npx nyc report --reporter=text-lcov | npx coveralls
