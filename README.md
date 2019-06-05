@@ -39,6 +39,10 @@ Options:
 Changelog
 ---------
 
+* 0.3.2 (Jun 5, 2019)
+
+  - Update to detect-indent@6.0.0.
+
 * 0.3.1 (May 13, 2018)
 
   - Exclude test files from the dist.
