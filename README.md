@@ -1,7 +1,7 @@
 webext-tx-fix
 =============
 
-[![Build Status](https://travis-ci.org/eight04/webext-tx-fix.svg?branch=master)](https://travis-ci.org/eight04/webext-tx-fix)
+[![Build Status](https://travis-ci.com/eight04/webext-tx-fix.svg?branch=master)](https://travis-ci.com/eight04/webext-tx-fix)
 [![Coverage Status](https://coveralls.io/repos/github/eight04/webext-tx-fix/badge.svg?branch=master)](https://coveralls.io/github/eight04/webext-tx-fix?branch=master)
 
 A CLI tool which re-adds placeholders to webextension locales pulled from Transifex. **Note that Transifex has fixed this problem for newly uploaded message files**, see [#4](https://github.com/eight04/webext-tx-fix/issues/4).
