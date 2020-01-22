@@ -23,7 +23,10 @@ function fixMessages(content, {messages, order, indent}) {
 	let shouldOutput = indent != null ||
     !isSubArray(order, translateOrder);
 	for (const key of translateOrder) {
-		if (translate[key].message === messages[key].message) {
+    if (!messages[key]) {
+      // strip unknown key?
+      delete translate[key];
+    } else if (translate[key].message === messages[key].message) {
 			// strip untranslated messages
 			delete translate[key];
 		} else if (!translate[key].placeholders && messages[key].placeholders) {

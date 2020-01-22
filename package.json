@@ -11,7 +11,7 @@
   ],
   "scripts": {
     "lint": "eslint **/*.js --cache --ignore-pattern=coverage",
-    "test": "npm run lint && nyc --reporter=html mocha",
+    "test": "npm run lint && c8 --reporter lcov mocha",
     "preversion": "npm test",
     "version": "npm run build && git add .",
     "postversion": "git push --follow-tags && npm publish",
@@ -31,11 +31,11 @@
     "ordered-json": "^0.1.1"
   },
   "devDependencies": {
+    "c8": "^7.0.1",
     "crlf": "^1.1.1",
-    "eslint": "^5.16.0",
+    "eslint": "^6.8.0",
     "inline-js": "^0.8.0",
-    "mocha": "^6.1.4",
-    "nyc": "^14.1.1"
+    "mocha": "^7.0.0"
   },
   "repository": "eight04/webext-tx-fix",
   "engines": {
